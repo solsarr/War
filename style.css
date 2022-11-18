@@ -13,9 +13,11 @@ body {
     background-image: url('https://media.istockphoto.com/id/1206505233/vector/poker-table-background-in-green-color.jpg?s=612x612&w=0&k=20&c=1-WRVj64dMfBuLFHjm08rCi3jsEa-7NGZwOhxBlyUdY=');
     background-size: cover;
 }
+img{
+    height:350px;
+    width:250px;
+}
 #pCard {
-    border-color: black;
-    border: 1px solid black;
     height:350px;
     width:250px;
     position:absolute;
@@ -23,8 +25,6 @@ body {
     left:300px;
 }
 #cCard {
-    border-color: black;
-    border: 1px solid black;
     height:350px;
     width:250px;
     position:absolute;
@@ -32,8 +32,6 @@ body {
     bottom:200px
 }
 #pScore{
-    border-color: black;
-    border: 1px solid black;
     height:100px;
     width:100px;
     position:absolute;
@@ -48,8 +46,6 @@ body {
     text-align: center;
 }
 #cScore{
-    border-color: black;
-    border: 1px solid black;
     height:100px;
     width:100px;
     position:absolute;
@@ -79,8 +75,6 @@ body {
 
 }
 #announce{
-    border-color: black;
-    border: 1px solid black;
     height:100px;
     width:250px;
     position:absolute;
@@ -96,15 +90,31 @@ body {
 				 1px -1px 0 #000;
     text-align: center;
 }
-.soldier1{
+#soldier1{
     height:350px;
     position:absolute;
     left:0px;
-    bottom: 200px
+    bottom: 200px;
+    height:400px;
+    width:400px;
 }
-.soldier2{
+#soldier2{
     height:350px;
     position:absolute;
     right:0px;
-    bottom: 200px
+    bottom: 200px;
+    height:400px;
+    width:400px;
+}
+#reset{
+    background: radial-gradient(circle at center, red 70%, white 100%)
+    ;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    position:absolute;
+    bottom: 120px;
+    left:665px;
 }

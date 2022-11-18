@@ -1,12 +1,6 @@
 
 
 
-// start = document.getElementById('start');
-// function startGame(){
-//     deal.disabled = false
-
-// }
-
 deal = document.getElementById('deal');
 
 reset = document.getElementById('reset');
@@ -76,46 +70,6 @@ const imgNum2 = Math.floor(Math.random()*randomImg.length);
   return [imgNum,imgNum2]
 }
 
-function getComImg() { 
-
-    const randomComImg = new Array();
-    
-    // randomImg.setAttribute('height','350');
-    // randomImg.setAttribute('width','250');
-    
-    
-    randomComImg[0] = "https://www.improvemagic.com/wp-content/uploads/2020/11/pa.png";
-    
-    randomComImg[1] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p2.png';
-    
-    randomComImg[2] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p3.png';
-    
-    randomComImg[3] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p4.png';
-    
-    randomComImg[4] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p5.png';
-    
-    randomComImg[5] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p6.png';
-    
-    randomComImg[6] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p7.png';
-    
-    randomComImg[7] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p8.png';
-    
-    randomComImg[8] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p9.png';
-    
-    randomComImg[9] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/p10.png';
-    
-    randomComImg[10] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/pj.png';
-    
-    randomComImg[11] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/pq.png';
-    
-    randomComImg[12] = 'https://www.improvemagic.com/wp-content/uploads/2020/11/pk.png';
-    
-    const imgNum2 = Math.floor(Math.random()*randomComImg.length);
-    console.log(imgNum2)
-    return document.getElementById("cCard").innerHTML = '<img src="'+randomComImg[imgNum2]+'" />';  
-    
-    }
-
 
     window.onload = function (){
         const deal = document.getElementById("deal");
@@ -181,13 +135,3 @@ if (player === comp){
 }
 }
 
-
-// if (getComImg.randomComImg != getImg.randomImg){
-//     console.log('working!!');
-
-
-
-
-// // console.log(imgNum2)
-// if (console.log(imgNum) > console.log(imgNum2)) {
-//     console.log('working')
