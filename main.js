@@ -127,27 +127,30 @@ function getComImg() {
 
         function pWin(){
             document.getElementById('msg').innerHTML = 'Player Won The War!';
-            
+            deal = document.getElementById('deal');
+
+            deal.disabled = true
 
         }
         function cWin(){
             document.getElementById('msg').innerHTML = 'Computer Won The War!';
-            
+            deal = document.getElementById('deal');
+
+            deal.disabled = true
 
 
         }
-
 
         function comScore() {
             const computerScore = document.getElementById('cScore');
-            let number = computerScore.innerHTML;
-            number++;
-            computerScore.innerHTML = number;
-            if (number >= 10){
+            let cNumber = computerScore.innerHTML;
+            cNumber++;
+            computerScore.innerHTML = cNumber;
+            if (cNumber >= 10){
                 cWin();
-               
             } 
         }
+
         function playerScore() {
             const playerScore = document.getElementById('pScore');
             let number = playerScore.innerHTML;
@@ -155,22 +158,26 @@ function getComImg() {
             playerScore.innerHTML = number;
             if (number >= 10){
                 pWin();
-                
             } 
         }
-
 function handler(){
-
+//grabbing random image function
 let compare = getImg()
 let player = compare[0]
 let comp = compare[1]
 console.log(player,comp)
+//comparison statements
 if (player > comp){
-    document.getElementById('msg').innerHTML = 'Player Wins This Battle!'; playerScore()
+    document.getElementById('msg').innerHTML = 'Player Wins This Battle!'; playerScore();
+
 }
 if (player < comp){
-    document.getElementById('msg').innerHTML = 'Computer Wins This Battle!'; comScore()
+    document.getElementById('msg').innerHTML = 'Computer Wins This Battle!'; comScore();
 
+}
+if (player === comp){
+    document.getElementById('msg').innerHTML = 'Its a Stalemate! Auto Rematch!'; getImg();
+    handler()
 }
 }
 
