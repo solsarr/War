@@ -1,31 +1,28 @@
 
-// document.getElementById('pCard');
-
-// let ace = document.createElement('img');
-// ace.setAttribute("height", "350");
-// ace.setAttribute("width", "250");
-// ace.src = "https://image.shutterstock.com/image-vector/vector-spade-icon-260nw-646581166.jpg";
-// document.getElementById('pCard').appendChild(ace);
-// console.log(ace)
 
 
-// function ace() {
-//     var ace = document.createElement("img");
-//     ace.setAttribute("src", "https://www.improvemagic.com/wp-content/uploads/2020/11/pa.png");
-//     ace.setAttribute("height", "350");
-//     ace.setAttribute("width", "250");
-//     ace.setAttribute("alt", "Flower");
-//     document.getElementById("cCard").appendChild(ace);
-//   }
-// const deal = document.getElementById('deal');
-// deal.addEventListener('click',console.log('hello'));
+// start = document.getElementById('start');
+// function startGame(){
+//     deal.disabled = false
 
-// window.onload = function (){
-// const deal = document.getElementById("deal");
-// deal.addEventListener("click", getImg);
-// deal.addEventListener("click", getComImg);
-// deal.addEventListener("click", console.log(first));
 // }
+
+deal = document.getElementById('deal');
+
+reset = document.getElementById('reset');
+function resetGame(){
+    document.getElementById("pCard").innerHTML='';
+     document.getElementById("cCard").innerHTML='';
+     document.getElementById('cScore').innerHTML='';
+     document.getElementById('pScore').innerHTML='';
+     document.getElementById('msg').innerHTML='Click Deal To Start The Battle';
+     deal.disabled = false
+
+
+
+}
+
+
 function getImg() { 
 
 const randomImg = new Array();
@@ -122,8 +119,22 @@ function getComImg() {
 
     window.onload = function (){
         const deal = document.getElementById("deal");
+        reset = document.getElementById('reset');
         deal.addEventListener("click", getImg);
         deal.addEventListener("click", handler);
+        reset.addEventListener('click',resetGame);
+        }
+
+        function pWin(){
+            document.getElementById('msg').innerHTML = 'Player Won The War!';
+            
+
+        }
+        function cWin(){
+            document.getElementById('msg').innerHTML = 'Computer Won The War!';
+            
+
+
         }
 
 
@@ -132,19 +143,33 @@ function getComImg() {
             let number = computerScore.innerHTML;
             number++;
             computerScore.innerHTML = number;
+            if (number >= 10){
+                cWin();
+               
+            } 
+        }
+        function playerScore() {
+            const playerScore = document.getElementById('pScore');
+            let number = playerScore.innerHTML;
+            number++;
+            playerScore.innerHTML = number;
+            if (number >= 10){
+                pWin();
+                
+            } 
         }
 
 function handler(){
 
-let test = getImg()
-let first = test[0]
-let second = test[1]
-console.log(first,second)
-if (first > second){
-    document.getElementById('msg').innerHTML = 'Player Wins!'
+let compare = getImg()
+let player = compare[0]
+let comp = compare[1]
+console.log(player,comp)
+if (player > comp){
+    document.getElementById('msg').innerHTML = 'Player Wins This Battle!'; playerScore()
 }
-if (first < second){
-    document.getElementById('msg').innerHTML = 'Computer Wins!'; comScore()
+if (player < comp){
+    document.getElementById('msg').innerHTML = 'Computer Wins This Battle!'; comScore()
 
 }
 }
