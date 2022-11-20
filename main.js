@@ -13,7 +13,6 @@ function resetGame(){
      deal.disabled = false
 
 
-
 }
 
 
